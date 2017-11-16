@@ -1,0 +1,26 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+#spring.druid
+#    druid:
+#      initialSize: 10
+#      minIdle: 10
+#      maxActive: 100
+#      maxWait: 1000
+
+mybatis:
+    #mapper.xml文件所在的路径usersMapper.xml usersMapper.xml
+    mapperLocations: classpath:mappers/*.xml
+    typeAliasesPackage: com.zzh.mybatis.mapper
+
+logging:
+  level:
+    #mapper.class文件所在的路径
+    com.zzh.mybatis.mapper: debug
+    com.ibatis.sqlmaps: debug
